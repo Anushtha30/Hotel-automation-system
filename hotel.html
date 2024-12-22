@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Room Reservation</title>
+    <link rel="stylesheet" href="hotel.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>LUXURY</h1>
+            <p>For Best Comfortable</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Room</a></li>
+                <li><a href="#">Booking</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h2>THIS IS THE BEST</h2>
+            <h1>ROOM RESERVATION WEBSITE</h1>
+        </div>
+    </main>
+ 
+    <div class="checkAvailability">
+        <h2>CHECK AVAILABILITY</h2>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+            <label for="arrival">Arrival Time:</label>
+            <input type="date" id="arrival">
+        </div>
+        <div class="form-group">
+            <label for="duration">Estimated Duration of Stay (in days):</label>
+            <input type="number" id="duration" min="1">
+        </div>
+        <div class="form-group">
+            <label for="roomType">Select Room Type:</label>
+            <select id="roomType">
+                <option value="Single Room - $50">Single Room - $50</option>
+                <option value="Double Room - $80">Double Room - $80</option>
+                <option value="Suite - $150">Suite - $150</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="bedType">Select Bed Type:</label>
+            <select id="bedType">
+                <option value="Single Bed">Single Bed</option>
+                <option value="Double Bed">Double Bed</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="ac">AC or Non-AC:</label>
+            <select id="ac">
+                <option value="AC (+$20)">AC (+$20)</option>
+                <option value="Non-AC">Non-AC</option>
+            </select>
+        </div>
+        <button onclick="checkAvailability()">Check Availability</button>
+        <button onclick="bookRoom()">Book Room</button>
+    
+        <div id="booking-summary">
+            <strong>Booking Summary</strong>
+            <p>No booking yet.</p>
+        </div>
+    </div>
+
+    <div class="slider-controls">
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+    <div class="apartments-section">
+        <h2>Our Apartments</h2>
+        <a href="#" class="view-all">View All Rooms →</a>
+        <div class="apartment-slider">
+            <div class="apartment-card">
+                <img src="bedroom photos 1.jfif" alt="Superior Room - Two Double Beds">
+                <h3>Superior Room – Two Double Beds</h3>
+                <a href="#">Check Details →</a>
+            </div>
+    
+            <div class="apartment-card">
+                <img src="bedroon no 2.jfif" alt="Junior Suite – One Single Bed">
+                <h3>Junior Suite – One Single Bed</h3>
+                <a href="#">Check Details →</a>
+            </div>
+    
+            <div class="apartment-card">
+                <img src="bedroon no 3.jfif" alt="Grand Superior Room – Two King Beds">
+                <h3>Grand Superior Room – Two King Beds</h3>
+                <a href="#">Check Details →</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- Gallery Section -->
+        <div class="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-images">
+                <img src="swiming pool.jpg" alt="swimming">
+                <img src="hotel canteen.jfif" alt="canteen">
+                <img src="hotel gym.jfif" alt="gym 3">
+                <img src="lobby.jpg" alt="lobby">
+                <img src="main.jpg" alt="main">
+                <img src="swiming pool 2 ].jpg" alt="bedroom">
+            </div>
+        </div>
+
+        <!-- News Section -->
+        <div class="news">
+            <h2>News From Us</h2>
+            <div class="news-item">
+                <div class="date">3 DEC</div>
+                <div class="news-content">
+                    <h3>Magna pars studiorum</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisici...</p>
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="date">3 DEC</div>
+                <div class="news-content">
+                    <h3>Sedial eiusmod tempor</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisici...</p>
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="date">13 NOV</div>
+                <div class="news-content">
+                    <h3>Gallery Post Format Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisici...</p>
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="date">12 NOV</div>
+                <div class="news-content">
+                    <h3>Audio Post Format</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in...</p>
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="date">12 NOV</div>
+                <div class="news-content">
+                    <h3>Nihilne te nocturnum</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio dignissimos reprehenderit assumenda delectus veniam praesentium?</p>
+                </div>
+            </div>
+            <a href="#" class="read-more">Read All News</a>
+        </div>
+    </div>
+
+    <section class="about-section">
+        <div class="about-item">
+            <div class="about-image">
+                <img src="tour 1.jfif" alt="About Us Image 1">
+            </div>
+            <div class="about-content">
+                <h3><b>A Little About Us</b></h3>
+                <p>Our Hotel is the best hotels in the world, we provides have best services with <b>No Problems</b>,<b>Great Facility</b>,at <b>Affordable Price</b>.  
+                </p>
+            </div>
+        </div>
+
+        <div class="about-item">
+            <div class="about-image">
+                <img src="tour 2.jfif" alt="About Us Image 2">
+            </div>
+            <div class="about-content">
+                <h3><b>Travel Plan Magazine</b></h3>
+                <p>Our hotel gives you best <b>Tour Plan</b> so that people have zero tension to make a plan. Our motto is to give zero tension tro <b>OUR GUEST</b></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial-section">
+        <div class="testimonial-container">
+            <h2 class="testimonial-heading">TESTIMONIAL</h2>
+            <p class="testimonial-text">This is the best hotel i visited recently. the advance Technologies and the staff were so good I'm so impressed by them, i really like there coordinations, there fast work is quit impressive</p>
+            <div class="testimonial-author">
+                <span class="author-name">John Smith</span>, <span class="author-title">Businessman</span>
+            </div>
+            <div class="testimonial-controls">
+                <button class="control-left">&#10094;</button>
+                <button class="control-right">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-column">
+                <h3><B>BOOK NOW!</B></h3>
+                <ul class="contact-info">
+                    <li><i class="fa fa-phone"></i> +91 0333-666-999</li>
+                    <li><i class="fa fa-envelope"></i> luxuryworld@gamil.com</li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-google"></i></a>
+                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                    <a href="#"><i class="fa fa-flickr"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>RECENT NEWS</h3>
+                <ul class="recent-news">
+                    <li><a href="#">New Material were Imported & Installed </a></li>
+                    <li><a href="#">Top 3 Celebrity are in Our Hotel</a></li>
+                    <li><a href="#">Nibh Sem Sit Ullamcorper</a></li>
+                    <li><a href="#">Donec luctus imperdiet</a></li>
+                    <li><a href="#">Magna pars studiorum</a></li>
+                    <li><a href="#">Sedial eiusmod tempor</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>OUR AWARDS</h3>
+                <div class="awards">
+                    <img src="Luxury Logo.jpg" alt="Luxury Logo" class="award-logo">
+                    <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <ul class="footer-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Booking</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <p>Copyright 2024 All Right Reserved by Anushtha Sharma</p>
+        </div>
+    </footer>
+
+    <script src="hotel.js"></script>
+    <script src="https://kit.fontawesome.com/9b9212d125.js" crossorigin="anonymous"></script>
+</body>
+</html>
